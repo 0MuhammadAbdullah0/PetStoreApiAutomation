@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/muham/Desktop/PetStoreApiAutomation">
+        <classes>
+            <class name="api.test.userTests">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testgetUser"/>
+                    <include name="testupdateuser"/>
+                    <include name="testLoginUser"/>
+                    <include name="logout"/>
+                    <include name="testCreateWithArray"/>
+                </methods>
+            </class>
+            <class name="api.test.usertest2">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testgetUser"/>
+                    <include name="testupdateuser"/>
+                    <include name="testLoginUser"/>
+                    <include name="logout"/>
+                    <include name="testCreateWithArray"/>
+                </methods>
+            </class>
+            <class name="api.test.DDTest">
+                <methods>
+                    <include name="postUserTest"/>
+                    <include name="deleteusers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
