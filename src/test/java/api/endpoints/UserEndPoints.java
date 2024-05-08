@@ -23,6 +23,7 @@ public class UserEndPoints {
                 post(routes.postUser);
 
         return response;
+
     }
     public static Response ReadUser(String userName)
     {

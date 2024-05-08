@@ -27,12 +27,13 @@ public class userTests {
         userPayload.setPassword(faker.internet().password(5,10));
         userPayload.setPhone(faker.phoneNumber().cellPhone());
     }
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void testPostUser()
     {
         testLoginUser();
         Response response= UserEndPoints.createUser(userPayload);
         response.then().log().all();
+        System.out.println(userPayload.toString());
     }
     @Test(priority = 2)
     public void testgetUser()
@@ -50,7 +51,7 @@ public class userTests {
         response.then().statusCode(200).log().all();
 
     }
-    @Test(priority = 1)
+    @Test(priority = 7)
     public void testLoginUser()
     {
         Response response=UserEndPoints.loginUser("abcd","abcd");
@@ -63,7 +64,7 @@ public class userTests {
         response.then().statusCode(200).log().all();
     }
 
-    @Test
+    @Test(priority = 6)
     public void testCreateWithArray()
     {
         Response response=UserEndPoints.createUserWithArray(userPayload);

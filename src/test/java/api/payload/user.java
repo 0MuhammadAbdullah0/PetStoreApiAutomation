@@ -3,7 +3,7 @@ package api.payload;
 public class user{
 
     int id;
-    String userName;
+    String username;
     String firstName;
     String LastName;
     String email;
@@ -60,11 +60,11 @@ public class user{
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public int getId() {
@@ -75,7 +75,17 @@ public class user{
         this.id = id;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "user{" +
+                "id=" + id +
+                ", userName='" + username + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", userStatus=" + userStatus +
+                '}';
+    }
 }

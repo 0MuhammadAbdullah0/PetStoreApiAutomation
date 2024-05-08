@@ -63,7 +63,7 @@ public class usertest2 {
         response.then().statusCode(200).log().all();
     }
 
-    @Test
+    @Test(priority = 6)
     public void testCreateWithArray()
     {
         Response response=UserEndPoints2.createUserWithArray(userPayload);
